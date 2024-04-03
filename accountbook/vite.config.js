@@ -35,7 +35,7 @@ export default defineConfig({
       '/api': {
         // 当遇到 /api 路径时，将其转换成 target 的值
         // target: 'http://api.chennick.wang/api/',
-        target: 'http://localhost:7001/api/',
+        target: 'http://localhost:3000/api/',
         changeOrigin: true,
         rewrite: path => path.replace(/^\/api/, '') // 将 /api 重写为空
       }

@@ -1,0 +1,111 @@
+.auth {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    background-image: url(../../Image/PhoneLoginBackImage.jpg);
+    background-size: cover;
+    background-position: center;
+
+    .tab,
+    .form,
+    .operation {
+        color: #000; /* 淡墨色的文字 */
+        font-family: '书法风格的字体', sans-serif;
+    }
+
+    .tab {
+        color: #597fe7;
+        padding: 30px 24px 10px 24px;
+        > span {
+            margin-right: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            &.avtive {
+                font-size: 20px;
+                border-bottom: 2px solid #597fe7;
+                padding-bottom: 6px;
+            }
+        }
+    }
+    .form {
+        padding: 0 6px;
+        :global {
+            .za-cell {
+                background-color: transparent;
+                &::after {
+                    border-top: none;
+                }
+            }
+            .za-input {
+                border: none;
+                border-bottom: 2px solid #000; /* 添加黑色下划线 */
+                &::placeholder {
+                    color: #333; /* 加重提示文字颜色 */
+                    opacity: 1; /* 确保颜色不透明 */
+                }
+            }
+        }
+    }
+    .operation {
+        padding: 10px 24px 0 24px;
+        .agree {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            label {
+                margin-left: 10px;
+                font-size: 14px;
+            }
+        }
+    }
+    h3 {
+        opacity: 0.5;
+        margin-left: 10px;
+        color: #000;
+        font-weight: bold;
+    }
+    .button {
+        position: relative;
+        width: 100px; // 按钮宽度
+        height: 40px; // 按钮高度
+        border-radius: 20px; // 圆角
+        background-color: #ccc; // 按钮背景色
+        padding: 5px 30px; /* 增加内边距 */
+
+        .circle {
+            position: absolute;
+            top: 5px; // 圆圈距离按钮顶部的距离
+            left: 5px; // 初始位置在左侧
+            width: 30px; // 圆圈宽度
+            height: 30px; // 圆圈高度
+            border-radius: 50%; // 圆角
+            background-color: white; // 圆圈背景色
+            transition: left 0.3s; // 平滑过渡效果
+
+            &.right {
+                left: calc(100% - 35px); // 切换到右侧
+            }
+        }
+    }
+    .customButton {
+        width: 150px;
+        background-color: black;
+        color: white;
+        transition: background-color 0.3s; /* 平滑过渡效果 */
+        opacity: 0.6;
+        margin: auto;
+    }
+
+    .customButton:active {
+        background-color: #333; /* 点击时的背景颜色 */
+    }
+
+    .buttonContainer {
+        display: flex;
+        justify-content: center;
+    }
+}
